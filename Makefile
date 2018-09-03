@@ -1,4 +1,4 @@
-bins=constexpr_fun if_initializer nested_namespace structured_binding template_arg_deduction
+bins=constexpr_fun if_initializer nested_namespace structured_binding template_arg_deduction if_constexpr
 all: $(bins)
 clean:
 	rm -f $(bins) *.o
