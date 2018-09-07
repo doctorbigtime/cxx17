@@ -3,9 +3,11 @@ all: $(bins)
 clean:
 	rm -f $(bins) *.o
 
+CFLAGS:=-std=c++17 -pthread
+
 filesystem: filesystem.cpp
-	c++ -std=c++17 filesystem.cpp -o filesystem -lstdc++fs
+	c++ $(CFLAGS) filesystem.cpp -o filesystem -lstdc++fs
 
 %: %.cpp
-	g++ -std=c++17 -g $^ -o $@
+	g++ $(CFLAGS) -g $^ -o $@
 
