@@ -46,5 +46,17 @@ auto main(int argc, char** argv) -> int
     std::string x = "foo bar baz qux";
     auto v = split(x);
     assert(v.size() == 4);
+    assert(v[0] == "foo");
+    assert(v[1] == "bar");
+    assert(v[2] == "baz");
+    assert(v[3] == "qux");
+
+    // Danger Will Robinson!
+    auto extension = [](std::string const& s) -> std::string_view {
+        return s.substr(s.rfind('.')+1);
+    };
+    std::string foobar = "foux-du.fahfah";
+    // BOOM! assert(extension(foobar) == "fahfah");
+
     return 0;
 }
