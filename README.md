@@ -11,6 +11,7 @@ A subset of the C++17 new language features.
     fold_expr.cpp
 - if constexpr 
     if_constexpr.cpp
+    nth_arg.cpp
 - if and switch initializers:
     if_initializer.cpp
 - inline variables:
